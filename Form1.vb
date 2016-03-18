@@ -15,10 +15,10 @@
         Dim strTemp As String
 
         strFileFrom = Dir(strCSVLive)
-        strFileTimeStamp = strFileFrom.Substring(0, (strFileFrom.Length - 4))
         If strFileFrom = "" Then
             Exit Sub
         Else
+            strFileTimeStamp = strFileFrom.Substring(0, (strFileFrom.Length - 4))
             strFileTo = strCSVArchive & strFileFrom
             strFileFrom = strCSVLive & strFileFrom
             ' CONNECT TO THE DATABASE
